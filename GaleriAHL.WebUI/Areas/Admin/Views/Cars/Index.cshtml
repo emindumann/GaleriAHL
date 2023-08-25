@@ -1,0 +1,77 @@
+﻿@model IEnumerable<GaleriAHL.Entities.Arac>
+
+@{
+    ViewData["Title"] = "Araçlar";
+}
+
+<h1>Araçlar</h1>
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Yeni Araç Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Renk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KasaTip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelYil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SatistaMi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Not)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marka)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Renk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fiyat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KasaTip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelYil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SatistaMi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Not)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marka.Ad)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

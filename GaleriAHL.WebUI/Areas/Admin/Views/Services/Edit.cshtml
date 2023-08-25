@@ -1,0 +1,81 @@
+﻿@model GaleriAHL.Entities.Servis
+
+@{
+    ViewData["Title"] = "Servis Kaydı Düzenle";
+}
+
+<h1>Servis Kaydı Düzenle</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ServisGelisTarih" class="control-label"></label>
+                <input asp-for="ServisGelisTarih" class="form-control" />
+                <span asp-validation-for="ServisGelisTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AracSorunu" class="control-label"></label>
+                <input asp-for="AracSorunu" class="form-control" />
+                <span asp-validation-for="AracSorunu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServisUcret" class="control-label"></label>
+                <input asp-for="ServisUcret" class="form-control" />
+                <span asp-validation-for="ServisUcret" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServisCikisTarih" class="control-label"></label>
+                <input asp-for="ServisCikisTarih" class="form-control" />
+                <span asp-validation-for="ServisCikisTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YapilanIslem" class="control-label"></label>
+                <input asp-for="YapilanIslem" class="form-control" />
+                <span asp-validation-for="YapilanIslem" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GarantiKapsamindaMi" /> @Html.DisplayNameFor(model => model.GarantiKapsamindaMi)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="AracPlaka" class="control-label"></label>
+                <input asp-for="AracPlaka" class="form-control" />
+                <span asp-validation-for="AracPlaka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KasaTip" class="control-label"></label>
+                <input asp-for="KasaTip" class="form-control" />
+                <span asp-validation-for="KasaTip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaseNo" class="control-label"></label>
+                <input asp-for="SaseNo" class="form-control" />
+                <span asp-validation-for="SaseNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notlar" class="control-label"></label>
+                <input asp-for="Notlar" class="form-control" />
+                <span asp-validation-for="Notlar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
